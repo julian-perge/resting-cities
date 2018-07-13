@@ -14,12 +14,14 @@
 			State Fish:
 			<a th:href="|@{/states/}${state.abbreviation}@{/fish}|" th:text="${state.fish}"></a>
 		</h2>
-		<ul>
+		<ul class="cityList"><!-- Create class for list -->
 			<li th:each="city : ${state.cities}">
 				<a 
 					th:href="|@{/states/}${state.abbreviation}@{/cities/}${city.id}|"
 					th:text="${city.name}"
 				></a><!-- /state/oh/cities/2 -->
+				<!-- Create a .delete button -->
+				<button class="delete">Remove</button>
 			</li>
 		</ul>
 	</main>
@@ -27,5 +29,8 @@
 	<footer>
 		<small>&copy; State List 2018</small>
 	</footer>
+	
+	<!-- Connect JS file -->
+	<script src="/js/app.js"></script>
 </body>
 </html>
