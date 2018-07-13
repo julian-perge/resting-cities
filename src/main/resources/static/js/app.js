@@ -27,7 +27,7 @@ function removeCity(event) {
 					// `abbreviation` and `cityId` reference lines 16 & 17
 					list += `
 						<li>
-							<a href="/states/${abbreviation}/cities/${cityId}">
+							<a href="/states/${abbreviation}/cities/${city.id}">
 								${city.name}
 							</a>
 							<!-- Create a .delete button -->
